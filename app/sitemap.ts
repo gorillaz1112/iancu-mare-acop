@@ -7,6 +7,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    {
+      url: `${base}/lucrari`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
     ...siteConfig.services.map((s) => ({
       url: `${base}/servicii/${s.slug}`,
       lastModified: now,

@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 
 const navItems = [
   { href: "/#servicii", label: "Servicii" },
+  { href: "/lucrari", label: "Lucrări" },
   { href: "/#zone", label: "Zone deservite" },
   { href: "/#despre", label: "Despre noi" },
   { href: "/#proces", label: "Cum lucrăm" },
@@ -50,30 +51,33 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 lg:flex" aria-label="Navigație principală">
+        <nav
+          className="hidden items-center gap-3.5 lg:flex lg:gap-4 xl:gap-6 2xl:gap-7"
+          aria-label="Navigație principală"
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-muted-foreground transition hover:text-foreground"
+              className="whitespace-nowrap text-[13px] text-muted-foreground transition hover:text-foreground xl:text-sm"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <a
             href={siteConfig.phoneHref}
-            className="hidden items-center gap-2 text-sm font-semibold text-foreground transition hover:text-primary sm:flex"
+            className="hidden items-center gap-1.5 text-sm font-semibold text-foreground transition hover:text-primary sm:flex sm:gap-2"
           >
-            <Phone className="h-4 w-4 text-primary" aria-hidden />
+            <Phone className="h-4 w-4 shrink-0 text-primary" aria-hidden />
             {siteConfig.phoneDisplay}
           </a>
           <Button
             asChild
             size="sm"
-            className="hidden h-10 rounded-full px-5 font-semibold sm:inline-flex"
+            className="hidden h-9 rounded-full px-4 text-xs font-semibold lg:inline-flex lg:h-10 xl:px-5 xl:text-sm"
           >
             <a href={siteConfig.phoneHref}>Sună acum</a>
           </Button>
@@ -91,9 +95,9 @@ export function SiteHeader() {
 
       {/* Mobile nav */}
       {open && (
-        <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
+        <div className="max-h-[min(70vh,520px)] overflow-y-auto border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <nav
-            className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6"
+            className="mx-auto flex max-w-7xl flex-col gap-0.5 px-4 py-3 sm:px-6"
             aria-label="Navigație mobilă"
           >
             {navItems.map((item) => (
@@ -101,7 +105,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-3 text-base font-medium text-foreground hover:bg-muted"
+                className="flex min-h-11 items-center rounded-xl px-3 py-2.5 text-base font-medium text-foreground hover:bg-muted"
               >
                 {item.label}
               </Link>

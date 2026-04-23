@@ -84,6 +84,42 @@ export function SiteFooter() {
           </div>
         </div>
 
+        {/* Quick links — same line wraps cleanly on small screens, full width on desktop */}
+        <nav
+          className="mt-10 border-t border-border/80 pt-10 lg:mt-12"
+          aria-label="Link-uri rapide"
+        >
+          <h3 className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            Navigare
+          </h3>
+          <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 sm:gap-x-6">
+            <li>
+              <Link
+                href="/"
+                className="text-sm text-muted-foreground transition hover:text-primary"
+              >
+                Acasă
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/lucrari"
+                className="text-sm text-muted-foreground transition hover:text-primary"
+              >
+                Lucrări
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/servicii"
+                className="text-sm text-muted-foreground transition hover:text-primary"
+              >
+                Toate serviciile
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>&copy; {new Date().getFullYear()} {siteConfig.brand}. Toate drepturile rezervate.</p>
           <p>Firmă acoperișuri · București · Ilfov · Giurgiu · Constanța · Călărași</p>
