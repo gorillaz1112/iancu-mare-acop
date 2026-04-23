@@ -36,7 +36,7 @@ export function About() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border card-elev">
               <Image
                 src="/roofer-team.jpg"
-                alt="Echipă profesionistă de acoperișuri Acoperiș Expert la lucru"
+                alt="Echipă profesionistă de acoperișuri Acoperiș Plus la lucru"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

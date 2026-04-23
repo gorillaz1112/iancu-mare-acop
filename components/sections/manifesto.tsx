@@ -45,7 +45,7 @@ export function Manifesto() {
                   AE
                 </div>
                 <div className="leading-tight">
-                  <p className="text-sm font-semibold">Echipa Acoperiș Expert</p>
+                  <p className="text-sm font-semibold">Echipa Acoperiș Plus</p>
                   <p className="text-xs text-primary-foreground/70">Fondată în 2010</p>
                 </div>
               </div>

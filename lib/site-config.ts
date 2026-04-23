@@ -1,5 +1,5 @@
 export const siteConfig = {
-  brand: "Acoperiș Expert",
+  brand: "Acoperiș Plus",
   phone: "0731527577",
   phoneHref: "tel:+40731527577",
   phoneDisplay: "0731 527 577",
@@ -7,9 +7,9 @@ export const siteConfig = {
     "https://wa.me/40731527577?text=" +
     encodeURIComponent("Bună ziua, aș dori un deviz pentru acoperiș."),
   whatsappDisplay: "WhatsApp",
-  email: "contact@acoperis-expert.ro",
+  email: "contact@acoperis-plus.ro",
   tagline: "Acoperișuri executate impecabil. Garantat.",
-  url: "https://acoperis-expert.ro",
+  url: "https://acoperis-plus.ro",
   areas: [
     {
       slug: "bucuresti-ilfov",

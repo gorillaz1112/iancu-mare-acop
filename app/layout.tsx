@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default:
-      "Acoperiș Expert — Montaj, Reparații și Înlocuire Acoperișuri în București, Ilfov, Giurgiu, Constanța și Călărași",
-    template: "%s | Acoperiș Expert",
+      "Acoperiș Plus — Montaj, Reparații și Înlocuire Acoperișuri în București, Ilfov, Giurgiu, Constanța și Călărași",
+    template: "%s | Acoperiș Plus",
   },
   description:
     "Firmă specializată în acoperișuri: montaj, reparații, înlocuire, hidroizolații, termoizolații, șarpante, jgheaburi, tablă și țiglă. Deviz gratuit. Garanție scrisă. Sună 0731 527 577.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     locale: "ro_RO",
     url: siteConfig.url,
     siteName: siteConfig.brand,
-    title: "Acoperiș Expert — Acoperișuri executate impecabil. Garantat.",
+    title: "Acoperiș Plus — Acoperișuri executate impecabil. Garantat.",
     description:
       "Montaj, reparații și înlocuire acoperișuri în București, Ilfov, Giurgiu, Constanța și Călărași. Deviz gratuit în 24h.",
   },

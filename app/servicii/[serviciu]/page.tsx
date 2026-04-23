@@ -152,7 +152,7 @@ export default async function ServicePage({
                 <div className="relative aspect-[4/5]">
                   <Image
                     src="/roof-detail.jpg"
-                    alt={`${service.title} — execuție profesională Acoperiș Expert`}
+                    alt={`${service.title} — execuție profesională Acoperiș Plus`}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 45vw"

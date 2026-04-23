@@ -7,7 +7,7 @@ export function StructuredData() {
     name: siteConfig.brand,
     telephone: "+40" + siteConfig.phone.replace(/^0/, ""),
     email: siteConfig.email,
-    url: "https://acoperis-expert.ro",
+    url: siteConfig.url,
     areaServed: siteConfig.areas.map((a) => ({
       "@type": "AdministrativeArea",
       name: a.name,
