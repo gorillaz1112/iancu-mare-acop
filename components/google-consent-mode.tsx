@@ -1,13 +1,11 @@
 import Script from "next/script"
 import { getGoogleConsentState, defaultCookieConsent } from "@/lib/cookie-consent"
+import { googleAdsId, googleAnalyticsId, googleTagManagerId } from "@/lib/google-tags"
 
 const deniedConsent = getGoogleConsentState(defaultCookieConsent)
 
 export function GoogleConsentMode() {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
-  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID
-  const directGtagId = gaId ?? googleAdsId
+  const directGtagId = googleAnalyticsId ?? googleAdsId
 
   if (process.env.NODE_ENV !== "production") return null
 
@@ -29,19 +27,19 @@ export function GoogleConsentMode() {
         `}
       </Script>
 
-      {gtmId && (
-        <Script id="google-tag-manager" strategy="afterInteractive">
+      {googleTagManagerId && (
+        <Script id="google-tag-manager" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${gtmId}');
+            })(window,document,'script','dataLayer','${googleTagManagerId}');
           `}
         </Script>
       )}
 
-      {!gtmId && directGtagId && (
+      {!googleTagManagerId && directGtagId && (
         <>
           <Script
             id="google-gtag-library"
@@ -53,12 +51,28 @@ export function GoogleConsentMode() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              ${gaId ? `gtag('config', '${gaId}');` : ""}
+              ${googleAnalyticsId ? `gtag('config', '${googleAnalyticsId}');` : ""}
               ${googleAdsId ? `gtag('config', '${googleAdsId}');` : ""}
             `}
           </Script>
         </>
       )}
     </>
+  )
+}
+
+export function GoogleTagManagerNoScript() {
+  if (process.env.NODE_ENV !== "production" || !googleTagManagerId) return null
+
+  return (
+    <noscript>
+      <iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
+        height="0"
+        width="0"
+        title="Google Tag Manager"
+        style={{ display: "none", visibility: "hidden" }}
+      />
+    </noscript>
   )
 }

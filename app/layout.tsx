@@ -6,7 +6,8 @@ import { SiteFooter } from "@/components/site-footer"
 import { FloatingCta } from "@/components/floating-cta"
 import { StructuredData } from "@/components/structured-data"
 import { CookieConsentBanner } from "@/components/cookie-consent"
-import { GoogleConsentMode } from "@/components/google-consent-mode"
+import { GoogleConsentMode, GoogleTagManagerNoScript } from "@/components/google-consent-mode"
+import { googleVerificationToken } from "@/lib/google-tags"
 import "./globals.css"
 
 const geist = Geist({
@@ -46,6 +47,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: siteConfig.brand }],
   creator: siteConfig.brand,
+  verification: {
+    google: googleVerificationToken,
+  },
   openGraph: {
     type: "website",
     locale: "ro_RO",
@@ -73,6 +77,7 @@ export default function RootLayout({
   return (
     <html lang="ro" className={`${geist.variable} ${manrope.variable} bg-background`}>
       <body className="font-sans bg-background text-foreground">
+        <GoogleTagManagerNoScript />
         <GoogleConsentMode />
         <StructuredData />
         <SiteHeader />
