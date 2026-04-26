@@ -9,7 +9,7 @@ export const siteConfig = {
   whatsappDisplay: "WhatsApp",
   email: "contact@acoperis-plus.ro",
   tagline: "Acoperișuri executate impecabil. Garantat.",
-  url: "https://acoperis-plus.ro",
+  url: "https://www.acoperis-plus.ro",
   areas: [
     {
       slug: "bucuresti-ilfov",

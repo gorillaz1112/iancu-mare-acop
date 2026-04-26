@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next"
 import { Geist, Manrope } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import { siteConfig } from "@/lib/site-config"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { FloatingCta } from "@/components/floating-cta"
 import { StructuredData } from "@/components/structured-data"
+import { CookieConsentBanner } from "@/components/cookie-consent"
+import { GoogleConsentMode } from "@/components/google-consent-mode"
 import "./globals.css"
 
 const geist = Geist({
@@ -72,12 +73,13 @@ export default function RootLayout({
   return (
     <html lang="ro" className={`${geist.variable} ${manrope.variable} bg-background`}>
       <body className="font-sans bg-background text-foreground">
+        <GoogleConsentMode />
         <StructuredData />
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
         <FloatingCta />
-        {process.env.NODE_ENV === "production" && <Analytics />}
+        <CookieConsentBanner />
       </body>
     </html>
   )

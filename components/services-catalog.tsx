@@ -31,10 +31,10 @@ export function ServicesCatalog() {
         className="w-full"
       >
         <div className="overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <TabsList className="inline-flex h-auto w-max gap-1.5 rounded-full border border-border bg-card p-1.5 shadow-[0_1px_2px_oklch(0.16_0.005_60_/_0.04)]">
+          <TabsList className="inline-flex h-auto w-max gap-1.5 rounded-full border border-border bg-card p-1.5 shadow-[0_1px_2px_oklch(0.16_0.005_60/0.04)]">
             <TabsTrigger
               value="all"
-              className="rounded-full px-5 py-2 text-sm font-medium transition-colors data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-[0_8px_20px_-10px_oklch(0.35_0.18_25_/_0.7)]"
+              className="rounded-full px-5 py-2 text-sm font-medium transition-colors data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-[0_8px_20px_-10px_oklch(0.35_0.18_25/0.7)]"
             >
               Toate
               <span className="ml-2 text-xs opacity-70">{siteConfig.services.length}</span>
@@ -43,7 +43,7 @@ export function ServicesCatalog() {
               <TabsTrigger
                 key={cat.id}
                 value={cat.id}
-                className="whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium transition-colors data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-[0_8px_20px_-10px_oklch(0.35_0.18_25_/_0.7)]"
+                className="whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium transition-colors data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-[0_8px_20px_-10px_oklch(0.35_0.18_25/0.7)]"
               >
                 {cat.label}
                 <span className="ml-2 text-xs opacity-70">{cat.slugs.length}</span>
@@ -54,7 +54,7 @@ export function ServicesCatalog() {
       </Tabs>
 
       {/* Category description */}
-      <div className="mt-6 min-h-[1.5rem]">
+      <div className="mt-6 min-h-6">
         {active !== "all" && (
           <p
             key={active}
@@ -76,7 +76,7 @@ export function ServicesCatalog() {
             <Link
               key={service.slug}
               href={`/servicii/${service.slug}`}
-              className="reveal-up group relative flex aspect-[4/3] flex-col justify-between overflow-hidden rounded-3xl bg-primary p-6 text-primary-foreground transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_32px_60px_-24px_oklch(0.35_0.18_25_/_0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-4 focus-visible:ring-offset-background sm:aspect-auto sm:min-h-[220px]"
+              className="reveal-up group relative flex aspect-4/3 flex-col justify-between overflow-hidden rounded-3xl bg-primary p-6 text-primary-foreground transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_32px_60px_-24px_oklch(0.35_0.18_25/0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-4 focus-visible:ring-offset-background sm:aspect-auto sm:min-h-[220px]"
               style={{ animationDelay: `${Math.min(i, 9) * 50}ms` }}
             >
               <span
@@ -95,7 +95,7 @@ export function ServicesCatalog() {
               </div>
 
               <h3 className="relative mt-6 font-display text-[19px] font-semibold leading-tight tracking-tight text-balance">
-                {service.shortTitle ?? service.title}
+                {service.shortTitle}
               </h3>
             </Link>
           )

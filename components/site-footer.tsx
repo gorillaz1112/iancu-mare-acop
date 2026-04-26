@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { HardHat, Phone, Mail } from "lucide-react"
 import { WhatsAppIcon } from "@/components/icons/whatsapp"
+import { CookieSettingsButton } from "@/components/cookie-consent"
 import { siteConfig } from "@/lib/site-config"
 
 export function SiteFooter() {
@@ -116,6 +117,46 @@ export function SiteFooter() {
               >
                 Toate serviciile
               </Link>
+            </li>
+            <li>
+              <Link
+                href="/politica-de-confidentialitate"
+                className="text-sm text-muted-foreground transition hover:text-primary"
+              >
+                Confidențialitate
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/politica-cookies"
+                className="text-sm text-muted-foreground transition hover:text-primary"
+              >
+                Politica cookies
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/termeni-si-conditii"
+                className="text-sm text-muted-foreground transition hover:text-primary"
+              >
+                Termeni
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/anpc"
+                className="text-sm text-muted-foreground transition hover:text-primary"
+              >
+                ANPC
+              </Link>
+            </li>
+            <li>
+              <CookieSettingsButton
+                variant="link"
+                className="h-auto p-0 text-sm font-normal text-muted-foreground transition hover:text-primary hover:no-underline"
+              >
+                Setări cookies
+              </CookieSettingsButton>
             </li>
           </ul>
         </nav>
