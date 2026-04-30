@@ -1,9 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Phone, ArrowUpRight, ShieldCheck, Star, Sparkles } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { WhatsAppIcon } from "@/components/icons/whatsapp"
-import { siteConfig } from "@/lib/site-config"
+import Image from "next/image";
+import Link from "next/link";
+import { Phone, ArrowUpRight, ShieldCheck, Star, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { WhatsAppIcon } from "@/components/icons/whatsapp";
+import { siteConfig } from "@/lib/site-config";
 
 const MARQUEE = [
   "Wienerberger",
@@ -14,7 +14,7 @@ const MARQUEE = [
   "Fakro",
   "Bilka",
   "Ruukki",
-]
+];
 
 export function Hero() {
   return (
@@ -79,7 +79,11 @@ export function Hero() {
               variant="outline"
               className="h-14 gap-2 rounded-full border-foreground/20 bg-transparent px-7 text-base font-semibold text-foreground hover:bg-foreground hover:text-background"
             >
-              <a href={siteConfig.whatsappHref} target="_blank" rel="noopener noreferrer">
+              <a
+                href={siteConfig.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <WhatsAppIcon className="h-5 w-5" />
                 Scrie pe WhatsApp
                 <ArrowUpRight className="h-4 w-4" />
@@ -94,7 +98,10 @@ export function Hero() {
                 Garanție
               </dt>
               <dd className="mt-2 font-display text-3xl font-bold leading-none text-foreground">
-                20 <span className="text-base font-medium text-muted-foreground">ani</span>
+                20{" "}
+                <span className="text-base font-medium text-muted-foreground">
+                  ani
+                </span>
               </dd>
             </div>
             <div>
@@ -135,7 +142,7 @@ export function Hero() {
             <figure className="reveal-image card-elev relative overflow-hidden rounded-[28px]">
               <div className="relative aspect-[4/5] grain">
                 <Image
-                  src="/hero-roof.jpg"
+                  src="/lucrari/asta444.jpeg"
                   alt="Acoperiș premium din țiglă ceramică montat profesional în România"
                   fill
                   priority
@@ -191,11 +198,8 @@ export function Hero() {
               aria-hidden
               className="absolute -right-4 -bottom-8 hidden rotate-[2deg] rounded-2xl border border-border bg-card px-5 py-4 shadow-xl sm:-right-6 sm:block"
             >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
-                Referință
-              </p>
               <p className="mt-1 font-display text-lg font-bold leading-tight">
-                Vilă, Pipera
+                Acoperis sa reziste
               </p>
               <p className="text-xs text-muted-foreground">
                 420 m² · țiglă Tondach
@@ -231,5 +235,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
