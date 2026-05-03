@@ -4,8 +4,7 @@ import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: `Termeni și condiții | ${siteConfig.brand}`,
-  description:
-    "Termenii de utilizare ai site-ului Acoperiș Plus: informații despre servicii, contact, oferte, garanții și limitarea răspunderii pentru conținutul publicat.",
+  description: `Termenii de utilizare ai site-ului ${siteConfig.brand}: informații despre servicii, contact, oferte, garanții și limitarea răspunderii pentru conținutul publicat.`,
   alternates: { canonical: "/termeni-si-conditii" },
 }
 

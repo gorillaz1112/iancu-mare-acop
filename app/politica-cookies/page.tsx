@@ -5,8 +5,7 @@ import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: `Politica privind cookie-urile | ${siteConfig.brand}`,
-  description:
-    "Politica de cookie-uri Acoperiș Plus: cookie-uri necesare, analiză, marketing, Google Consent Mode v2 și opțiuni pentru modificarea consimțământului.",
+  description: `Politica de cookie-uri ${siteConfig.brand}: cookie-uri necesare, analiză, marketing, Google Consent Mode v2 și opțiuni pentru modificarea consimțământului.`,
   alternates: { canonical: "/politica-cookies" },
 }
 

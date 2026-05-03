@@ -4,35 +4,35 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Premium editorial palette — 5 colors:
-     ivory (background), pure white (cards), raspberry red (primary),
-     velvet red (deep accent), near-black ink (text).
+  /* Premium editorial palette — ivory, white cards, deep blue primary,
+     navy accent, cool ink text (Nova brand).
   */
-  --background: oklch(0.975 0.006 70);           /* #F8F5F2 ivory */
-  --foreground: oklch(0.16 0.005 60);            /* near-black ink */
-  --card: oklch(1 0 0);                          /* white */
-  --card-foreground: oklch(0.16 0.005 60);
+  --background: oklch(0.975 0.008 250);           /* ivory with cool whisper */
+  --foreground: oklch(0.16 0.012 260);          /* near-black, slight cool */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0.012 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0.005 60);
+  --popover-foreground: oklch(0.16 0.012 260);
 
-  --primary: oklch(0.58 0.22 27);                /* #D62828 — bright premium red */
-  --primary-foreground: oklch(0.995 0.003 70);
+  --primary: oklch(0.52 0.17 258);               /* confident blue */
+  --primary-foreground: oklch(0.995 0.01 250);
 
-  --secondary: oklch(0.95 0.008 70);             /* warm beige */
-  --secondary-foreground: oklch(0.2 0.005 60);
+  --secondary: oklch(0.95 0.012 248);            /* cool mist */
+  --secondary-foreground: oklch(0.2 0.015 260);
 
-  --muted: oklch(0.95 0.006 70);
-  --muted-foreground: oklch(0.46 0.01 60);
+  --muted: oklch(0.95 0.01 250);
+  --muted-foreground: oklch(0.44 0.02 260);
 
-  --accent: oklch(0.43 0.19 25);                 /* #C1121F — deeper red accent */
-  --accent-foreground: oklch(0.995 0.003 70);
+  --accent: oklch(0.4 0.14 262);                 /* deeper navy accent */
+  --accent-foreground: oklch(0.995 0.01 250);
 
-  --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: oklch(0.995 0.003 70);
+  /* Distinct from brand blue — form errors stay conventionally “alert” */
+  --destructive: oklch(0.54 0.19 28);
+  --destructive-foreground: oklch(0.995 0.01 250);
 
-  --border: oklch(0.9 0.006 70);
-  --input: oklch(0.9 0.006 70);
-  --ring: oklch(0.58 0.22 27);
+  --border: oklch(0.9 0.01 250);
+  --input: oklch(0.9 0.01 250);
+  --ring: oklch(0.52 0.17 258);
   --radius: 1rem;
 }
 
@@ -93,16 +93,16 @@
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
 
-  /* Editorial hero background — ivory with whisper-soft raspberry diffusion */
+  /* Editorial hero background — ivory with whisper-soft blue diffusion */
   .bg-editorial {
     background:
-      radial-gradient(1100px 560px at 88% -8%, oklch(0.88 0.1 18 / 0.28), transparent 58%),
-      radial-gradient(900px 520px at -8% 108%, oklch(0.92 0.05 20 / 0.22), transparent 55%),
+      radial-gradient(1100px 560px at 88% -8%, oklch(0.9 0.08 252 / 0.26), transparent 58%),
+      radial-gradient(900px 520px at -8% 108%, oklch(0.93 0.04 248 / 0.2), transparent 55%),
       var(--background);
   }
 
   .bg-soft {
-    background: linear-gradient(180deg, oklch(0.975 0.006 70) 0%, oklch(0.985 0.004 70) 100%);
+    background: linear-gradient(180deg, oklch(0.975 0.008 250) 0%, oklch(0.985 0.006 252) 100%);
   }
 
   /* Hairline separators */

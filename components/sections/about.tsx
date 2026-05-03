@@ -36,7 +36,7 @@ export function About() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border card-elev">
               <Image
                 src="/roofer-team.jpg"
-                alt="Echipă profesionistă de acoperișuri Acoperiș Plus la lucru"
+                alt={`Echipă profesionistă de acoperișuri ${siteConfig.brand} la lucru`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -57,13 +57,13 @@ export function About() {
               Despre {siteConfig.brand}
             </span>
             <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-[52px] lg:leading-[1.05]">
-              Acoperișuri construite să{" "}
-              <span className="italic font-medium text-primary">reziste o viață.</span>
+              Fiecare șantier tratat ca{" "}
+              <span className="italic font-medium text-primary">proiect unic.</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
-              Suntem o echipă de profesioniști pasionați de ceea ce fac. De peste 15 ani
-              montăm, reparăm și înlocuim acoperișuri în București, Ilfov, Giurgiu, Constanța
-              și Călărași. Credem în lucrul curat, în materiale bune și în cuvântul dat.
+              Suntem montatori și ingineri de șantier concentrați pe detalii. Lucrăm în
+              București, Ilfov, Giurgiu, Constanța și Călărași — cu deviz clar înainte de
+              execuție, materiale trasabile și promisiuni pe care le putem susține în scris.
             </p>
 
             <ul className="mt-10 grid gap-5 sm:grid-cols-2">

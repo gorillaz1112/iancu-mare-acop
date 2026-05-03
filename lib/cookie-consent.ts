@@ -1,6 +1,6 @@
 export const COOKIE_CONSENT_VERSION = 1
-export const COOKIE_CONSENT_STORAGE_KEY = "acoperis-plus-cookie-consent"
-export const COOKIE_SETTINGS_EVENT = "acoperis-plus:open-cookie-settings"
+export const COOKIE_CONSENT_STORAGE_KEY = "acoperis-nova-cookie-consent"
+export const COOKIE_SETTINGS_EVENT = "acoperis-nova:open-cookie-settings"
 
 export type ConsentCategory = "necessary" | "analytics" | "marketing"
 

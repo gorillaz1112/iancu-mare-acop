@@ -1,15 +1,17 @@
 export const siteConfig = {
-  brand: "Acoperiș Plus",
-  phone: "0731527577",
-  phoneHref: "tel:+40731527577",
-  phoneDisplay: "0731 527 577",
+  brand: "Acoperiș Nova",
+  phone: "0736081187",
+  phoneHref: "tel:+40736081187",
+  phoneDisplay: "0736 081 187",
   whatsappHref:
-    "https://wa.me/40731527577?text=" +
-    encodeURIComponent("Bună ziua, aș dori un deviz pentru acoperiș."),
+    "https://wa.me/40736081187?text=" +
+    encodeURIComponent(
+      "Bună ziua, sunt interesat(ă) de un deviz pentru acoperiș — vă rog să reveniți când puteți.",
+    ),
   whatsappDisplay: "WhatsApp",
-  email: "contact@acoperis-plus.ro",
-  tagline: "Acoperișuri executate impecabil. Garantat.",
-  url: "https://www.acoperis-plus.ro",
+  email: "expertacoperis01@gmail.com",
+  tagline: "Execuție atentă la detalii, materiale verificate — totul clar, în scris.",
+  url: "https://www.acoperis-nova.ro",
   areas: [
     {
       slug: "bucuresti-ilfov",

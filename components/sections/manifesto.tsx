@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react"
+import { siteConfig } from "@/lib/site-config"
 
 export function Manifesto() {
   return (
@@ -21,15 +22,15 @@ export function Manifesto() {
         <div className="grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-16">
           <div className="lg:col-span-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-foreground px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-background">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <span className="h-1.5 w-1.5 rounded-full bg-white/90" aria-hidden />
               Filosofia noastră
             </div>
 
             <h2 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-[64px]">
-              Un acoperiș bun nu se vede.{" "}
-              <span className="italic font-medium text-foreground">Se simte</span>
+              Calitatea se vede în detalii,{" "}
+              <span className="italic font-medium text-foreground">nu în promisiuni goale</span>
               <br className="hidden sm:block" />
-              <span className="opacity-90">— timp de 30 de ani.</span>
+              <span className="opacity-90">— și în documentația de șantier.</span>
             </h2>
           </div>
 
@@ -37,16 +38,17 @@ export function Manifesto() {
             <div className="relative rounded-2xl border border-white/20 bg-white/5 p-6 backdrop-blur-[2px] sm:p-7">
               <Quote className="h-6 w-6 text-foreground" strokeWidth={2.2} />
               <p className="mt-4 text-[15px] leading-relaxed text-primary-foreground/90">
-                Lucrăm ca pentru casa noastră. Material bun, montaj curat, cuvânt dat — fără
-                scurtături, fără surprize, fără explicații după predare.
+                Ne uităm la pantă, la ventilație și la prinderi înainte să montăm prima
+                țiglă. Transparență pe deviz, poze la predare și garanție pe care o poți
+                citi linie cu linie.
               </p>
               <div className="mt-5 flex items-center gap-3 border-t border-white/15 pt-4">
                 <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-[11px] font-bold uppercase tracking-wider text-background">
                   AE
                 </div>
                 <div className="leading-tight">
-                  <p className="text-sm font-semibold">Echipa Acoperiș Plus</p>
-                  <p className="text-xs text-primary-foreground/70">Fondată în 2010</p>
+                  <p className="text-sm font-semibold">Echipa {siteConfig.brand}</p>
+                  <p className="text-xs text-primary-foreground/70">Standarde clare pe șantier</p>
                 </div>
               </div>
             </div>

@@ -5,8 +5,7 @@ import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: `Politica de confidențialitate | ${siteConfig.brand}`,
-  description:
-    "Politica de confidențialitate Acoperiș Plus: date prelucrate, temeiuri GDPR, drepturile persoanelor vizate și informații despre Google Analytics, Google Ads și Tag Manager.",
+  description: `Politica de confidențialitate ${siteConfig.brand}: date prelucrate, temeiuri GDPR, drepturile persoanelor vizate și informații despre Google Analytics, Google Ads și Tag Manager.`,
   alternates: { canonical: "/politica-de-confidentialitate" },
 }
 

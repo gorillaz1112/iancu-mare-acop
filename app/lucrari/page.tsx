@@ -313,7 +313,7 @@ export default function LucrariPage() {
           <GTMButton
             gtmLabel="lucrari_cta_call"
             gtmCategory="Portfolio CTA"
-            className="mt-8 h-14 gap-2 rounded-full bg-primary px-10 text-base font-semibold text-primary-foreground shadow-[0_14px_36px_-14px_oklch(0.53_0.22_18_/_0.55)] transition-transform hover:scale-[1.02] hover:bg-primary/90"
+            className="mt-8 h-14 gap-2 rounded-full bg-primary px-10 text-base font-semibold text-primary-foreground shadow-[0_14px_36px_-14px_oklch(0.5_0.16_258_/_0.45)] transition-transform hover:scale-[1.02] hover:bg-primary/90"
             asChild
           >
             <a

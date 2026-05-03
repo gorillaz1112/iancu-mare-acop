@@ -5,8 +5,7 @@ import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: `ANPC | ${siteConfig.brand}`,
-  description:
-    "Informații pentru consumatori, reclamații ANPC și soluționarea alternativă a litigiilor pentru serviciile prezentate de Acoperiș Plus.",
+  description: `Informații pentru consumatori, reclamații ANPC și soluționarea alternativă a litigiilor pentru serviciile prezentate de ${siteConfig.brand}.`,
   alternates: { canonical: "/anpc" },
 }
 

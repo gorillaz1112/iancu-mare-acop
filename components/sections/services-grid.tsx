@@ -33,7 +33,7 @@ export function ServicesGrid() {
               <Link
                 key={service.slug}
                 href={`/servicii/${service.slug}`}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-primary p-8 text-primary-foreground transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.015] hover:shadow-[0_32px_60px_-24px_oklch(0.35_0.18_25_/_0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-primary p-8 text-primary-foreground transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.015] hover:shadow-[0_32px_60px_-24px_oklch(0.35_0.12_258_/_0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
                 style={{ animationDelay: `${i * 90}ms` }}
               >
                 {/* soft sheen on hover */}
@@ -73,7 +73,7 @@ export function ServicesGrid() {
           </p>
           <Link
             href="/servicii"
-            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-all duration-300 hover:bg-primary hover:shadow-[0_14px_36px_-16px_oklch(0.35_0.18_25_/_0.7)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-all duration-300 hover:bg-primary hover:shadow-[0_14px_36px_-16px_oklch(0.35_0.12_258_/_0.55)]"
           >
             Vezi toate serviciile
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />

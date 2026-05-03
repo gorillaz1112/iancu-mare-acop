@@ -1,4 +1,9 @@
-export const googleVerificationToken = "zr1nx45_1tlUsE7wDRpXHZgc0kueBTnvvh7u3yJA1G0"
+/**
+ * After verifying acoperis-nova.ro in Google Search Console, paste the new content token here,
+ * or set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` in Vercel (takes precedence).
+ */
+export const googleVerificationToken =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "zr1nx45_1tlUsE7wDRpXHZgc0kueBTnvvh7u3yJA1G0"
 
 // GTM container IDs are public identifiers; the env var lets Vercel override it per environment.
 export const googleTagManagerId = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-PMVVBHST"

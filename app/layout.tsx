@@ -23,13 +23,14 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default:
-      "Acoperiș Plus — Montaj, Reparații și Înlocuire Acoperișuri în București, Ilfov, Giurgiu, Constanța și Călărași",
-    template: "%s | Acoperiș Plus",
+    default: `${siteConfig.brand} — Montaj, reparații și înlocuire acoperișuri în București, Ilfov, Giurgiu, Constanța și Călărași`,
+    template: `%s | ${siteConfig.brand}`,
   },
-  description:
-    "Firmă specializată în acoperișuri: montaj, reparații, înlocuire, hidroizolații, termoizolații, șarpante, jgheaburi, tablă și țiglă. Deviz gratuit. Garanție scrisă. Sună 0731 527 577.",
+  description: `${siteConfig.tagline} Montaj, reparații, înlocuire, hidroizolații și termoizolații. Deviz gratuit. Sună ${siteConfig.phoneDisplay}. acoperis-nova.ro`,
   keywords: [
+    "Acoperiș Nova",
+    "acoperis nova",
+    "acoperis-nova.ro",
     "acoperișuri București",
     "reparații acoperiș București",
     "montaj acoperiș Ilfov",
@@ -55,16 +56,16 @@ export const metadata: Metadata = {
     locale: "ro_RO",
     url: siteConfig.url,
     siteName: siteConfig.brand,
-    title: "Acoperiș Plus — Acoperișuri executate impecabil. Garantat.",
-    description:
-      "Montaj, reparații și înlocuire acoperișuri în București, Ilfov, Giurgiu, Constanța și Călărași. Deviz gratuit în 24h.",
+    title: `${siteConfig.brand} — ${siteConfig.tagline}`,
+    description: `Montaj, reparații și înlocuire acoperișuri în București, Ilfov, Giurgiu, Constanța și Călărași. Deviz gratuit în 24h. ${siteConfig.phoneDisplay}.`,
   },
   robots: { index: true, follow: true },
   generator: "v0.app",
 }
 
 export const viewport: Viewport = {
-  themeColor: "#F8F5F2",
+  /* Cool ivory aligned with --background */
+  themeColor: "#f2f5fa",
   width: "device-width",
   initialScale: 1,
 }
